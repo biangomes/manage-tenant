@@ -24,7 +24,36 @@ Exemplo:
 
 `docs-1-entity-relationship-diagram`
 
-- **docs**: refere-se ao **tipo de alteração**
-- **1**: refere-se ao número do card no GH Projects
-- **entity-relationship-diagram**: refere-se às palavras chave
+- **docs**: refere-se ao **tipo de alteração**.
+- **1**: refere-se ao número do card no GH Projects.
+- **entity-relationship-diagram**: refere-se às palavras chave.
 
+---
+
+# Tenants management project
+
+## Commits good practices
+
+**Reference:** <br> https://github.com/RomuloOliveira/commit-messages-guide/blob/master/README_pt-BR.md
+
+- **fix**: commit of type `fix` solves a bug in your code base.
+- **feature**: adds or changing in the code in order to implement new features.
+- **refactor**: refers to code refactor without change the functionality.
+- **style**: changing in the style of code without change the functionality.
+- **test**: updating and changing new tests.
+- **chore**: small changing without change the functionalities.
+- **docs**: adds or changing the documentation.
+- **ci**: build process or CI of the project.
+
+## Good practices of branches name
+
+When starting to work on a issue, must create a specific branch to it. Branches name must follow:
+`kindofchanging-cardsname-wordkey`
+
+Example:
+
+`docs-1-entity-relationship-diagram`
+
+- **docs**: refers to kind of changing.
+- **1**: refers to number of the card in the Github Project.
+- **entity-relationship-diagram**: refers to key word.
