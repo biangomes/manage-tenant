@@ -8,20 +8,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Entity
 @Getter
 @Setter
-public class Rent implements Serializable {
+public class BankData implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Long id;
-  private Long numberOfContract;
-  private Apartment apartment;
-  private Tenant tenant;
-  private BigDecimal rentalValue;
-  private LocalDateTime paymentDate;
-  private int rentalTime;
+  private String account;
+  private String agency;
+  private String bankName;
+  private Boolean isCheckingAccount;
+  private Boolean isSavingsAccount;
+  private Boolean isSalaryAccount;
 }
