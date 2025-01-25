@@ -13,7 +13,7 @@
 - **chore**: pequenas alterações que não modifiquem as funcionalidades.
 - **docs**: modificação ou adição de documentação.
 - **ci**: processo de build ou CI do projeto
--- **study**: estudo de alguma tecnologia, conteúdo, fundamento que auxilie a conclusão de alguma tarefa ou card
+- **study**: estudo de alguma tecnologia, conteúdo, fundamento que auxilie a conclusão de alguma tarefa ou card
 
 ## Boas práticas de nome de branch
 
