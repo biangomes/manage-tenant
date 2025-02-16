@@ -1,9 +1,6 @@
 package com.beanascigom.backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,5 +15,7 @@ public class Apartment implements Serializable {
   private Long id;
   private int numberOfRooms;
   private int numberOfBathrooms;
+  @ManyToOne
+  @JoinColumn(name = "property_id", nullable = false)
   private Property property;
 }
