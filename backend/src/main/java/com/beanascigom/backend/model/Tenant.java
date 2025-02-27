@@ -1,14 +1,8 @@
 package com.beanascigom.backend.model;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -29,6 +23,9 @@ public class Tenant implements Serializable {
 //  private BankData bankData;
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
   private LocalDateTime birth;
+  @ManyToOne
+  @JoinColumn(name = "rent_id")
+  private Rent rent;
 
   public Tenant() {}
 
@@ -105,5 +102,13 @@ public class Tenant implements Serializable {
 
   public void setBirth(LocalDateTime birth) {
     this.birth = birth;
+  }
+
+  public Rent getRent() {
+    return rent;
+  }
+
+  public void setRent(Rent rent) {
+    this.rent = rent;
   }
 }

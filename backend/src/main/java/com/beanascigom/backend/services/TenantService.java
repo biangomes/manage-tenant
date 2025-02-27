@@ -19,8 +19,6 @@ public class TenantService {
 
     public List<Tenant> getTenantsWithSalaryBetweenTwoValues(BigDecimal minSalary, BigDecimal maxSalary) {
         logger.info("maxSalary: " + maxSalary + "\nminSalary: " + minSalary);
-//        BigDecimal minimum = new BigDecimal(minSalary);
-//        BigDecimal maximum = new BigDecimal(maxSalary);
         return repo.findAllBySalaryBetween(minSalary, maxSalary);
     }
 }

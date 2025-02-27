@@ -7,8 +7,6 @@ import lombok.Setter;
 import java.io.Serializable;
 
 @Entity
-@Getter
-@Setter
 public class Apartment implements Serializable {
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,4 +16,36 @@ public class Apartment implements Serializable {
   @ManyToOne
   @JoinColumn(name = "property_id", nullable = false)
   private Property property;
+
+  public Long getId() {
+    return id;
+  }
+
+  public void setId(Long id) {
+    this.id = id;
+  }
+
+  public int getNumberOfRooms() {
+    return numberOfRooms;
+  }
+
+  public void setNumberOfRooms(int numberOfRooms) {
+    this.numberOfRooms = numberOfRooms;
+  }
+
+  public int getNumberOfBathrooms() {
+    return numberOfBathrooms;
+  }
+
+  public void setNumberOfBathrooms(int numberOfBathrooms) {
+    this.numberOfBathrooms = numberOfBathrooms;
+  }
+
+  public Property getProperty() {
+    return property;
+  }
+
+  public void setProperty(Property property) {
+    this.property = property;
+  }
 }
