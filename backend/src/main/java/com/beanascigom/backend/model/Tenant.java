@@ -3,6 +3,8 @@ package com.beanascigom.backend.model;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -26,6 +28,10 @@ public class Tenant implements Serializable {
   @ManyToOne
   @JoinColumn(name = "rent_id")
   private Rent rent;
+  @CreationTimestamp
+  private LocalDateTime createdAt;
+  @UpdateTimestamp
+  private LocalDateTime updatedAt;
 
   public Tenant() {}
 

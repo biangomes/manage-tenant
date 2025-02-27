@@ -24,6 +24,7 @@ public class Rent implements Serializable {
   private int rentalTime;
   @Column(name = "active")
   private boolean isActive;
+//  private LocalDateTime createdA
 
   public Long getId() {
     return id;

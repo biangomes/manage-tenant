@@ -32,7 +32,7 @@ public class TenantController {
         var tenants = service.getTenantsWithSalaryBetweenTwoValues(minSalary, maxSalary);
         String json = objectMapper.writeValueAsString(tenants);
         logger.info("Tenants: " + tenants);
-        return new ResponseEntity<List<Tenant>>(tenants, HttpStatus.OK);
+        return new ResponseEntity<>(tenants, HttpStatus.OK);
     }
 
 }
