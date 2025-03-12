@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 @Entity
 public class Apartment implements Serializable {
@@ -16,6 +17,10 @@ public class Apartment implements Serializable {
   @ManyToOne
   @JoinColumn(name = "property_id", nullable = false)
   private Property property;
+
+  private BigDecimal value;
+
+  private boolean isAvailable;
 
   public Long getId() {
     return id;
@@ -47,5 +52,21 @@ public class Apartment implements Serializable {
 
   public void setProperty(Property property) {
     this.property = property;
+  }
+
+  public BigDecimal getValue() {
+    return value;
+  }
+
+  public void setValue(BigDecimal value) {
+    this.value = value;
+  }
+
+  public boolean isAvailable() {
+    return isAvailable;
+  }
+
+  public void setAvailable(boolean available) {
+    isAvailable = available;
   }
 }

@@ -36,6 +36,7 @@ public class ApartmentService {
         if (property.isEmpty()) {
             throw new EntityNotFoundException("Não é possível salvar apartamento sem propriedade vinculada");
         }
+        
         apartment.setProperty(property.get());
         apartment.setNumberOfBathrooms(dto.getNumberOfBathrooms());
         apartment.setNumberOfRooms(dto.getNumberOfRooms());
