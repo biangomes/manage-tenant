@@ -1,13 +1,11 @@
 package com.beanascigom.backend.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Getter
@@ -25,4 +23,7 @@ public class Property implements Serializable {
   private String state;
   private Double buildArea;
   private String description;
+
+  @OneToMany(mappedBy = "property")
+  private List<Apartment> apartment;
 }
